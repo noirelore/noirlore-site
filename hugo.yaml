@@ -1,0 +1,33 @@
+baseURL: "https://noirlore.com/"
+languageCode: "en-us"
+title: "Noir Lore"
+theme: "noirlore"
+
+params:
+  description: "Stories from the shadows. Podcasts, documentaries, and long-form narratives."
+  tagline: "Stories from the shadows."
+
+menu:
+  main:
+    - name: Podcast
+      url: /podcast/
+      weight: 1
+    - name: Documentary
+      url: /documentary/
+      weight: 2
+    - name: About
+      url: /about/
+      weight: 3
+
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+    - RSS

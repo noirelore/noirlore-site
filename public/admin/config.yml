@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: noirelore/noirlore-site
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "podcast"
+    label: "Podcast Episodes"
+    folder: "content/podcast"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Categories", name: "categories", widget: "list", default: ["Podcast"] }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Audio URL", name: "audio", widget: "string", required: false, hint: "Link to hosted audio file or podcast platform" }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "documentary"
+    label: "Documentary Projects"
+    folder: "content/documentary"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Categories", name: "categories", widget: "list", default: ["Documentary"] }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="list-page">
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="card-grid">
+    {{ range .Pages }}
+    <article class="card">
+      {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Title }}" class="card-img">{{ end }}
+      <div class="card-body">
+        <span class="card-category">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</span>
+        <h3 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p class="card-summary">{{ .Summary }}</p>
+        <time class="card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
