@@ -1,0 +1,4 @@
+# Hugo build output — CI rebuilds this from source on every deploy
+/public/
+/resources/_gen/
+.hugo_build.lock

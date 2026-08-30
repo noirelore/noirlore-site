@@ -1,8 +1,11 @@
 {{ define "main" }}
 <article class="post">
   <header class="post-header">
-    <span class="post-category">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</span>
+    <span class="post-category">
+      {{- with .Params.series }}{{ index . 0 }}
+      {{- else }}{{ with $.Params.categories }}{{ index . 0 }}{{ end }}{{ end -}}</span>
     <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Params.episode }}<span class="post-episode">Episode {{ . }}</span>{{ end }}
     <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
   </header>
   {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Title }}" class="post-hero-img">{{ end }}

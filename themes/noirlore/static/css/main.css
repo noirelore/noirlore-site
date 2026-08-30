@@ -211,3 +211,54 @@ img { max-width: 100%; height: auto; display: block; }
   .main-content { padding: 2rem 1rem; }
   .card-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Section description & empty states ── */
+.page-description {
+  color: var(--text-muted);
+  margin-top: -1.25rem;
+  margin-bottom: 2rem;
+}
+.empty-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Episode markers ── */
+.card-episode,
+.post-episode {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-bottom: 0.5rem;
+}
+
+/* ── 404 ── */
+.error-page {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+.error-page .page-title {
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  border-bottom: none;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+}
+.error-message {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+.error-actions {
+  margin-top: 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
