@@ -2,4 +2,4 @@
 title: "About Noir Lore"
 ---
 
-Noir Lore is a content network for long-form storytelling — podcasts, documentaries, and narrative journalism from the shadows.
+Noir Lore tells crime stories in long form — one case at a time, followed from the first report to whatever passes for an ending.

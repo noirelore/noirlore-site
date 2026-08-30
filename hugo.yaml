@@ -4,16 +4,16 @@ title: "Noir Lore"
 theme: "noirlore"
 
 params:
-  description: "Stories from the shadows. Podcasts, documentaries, and long-form narratives."
-  tagline: "Stories from the shadows."
+  description: "Crime stories from the shadows. Long-form narrative told one case at a time."
+  tagline: "Crime stories from the shadows."
 
 menu:
   main:
-    - name: Podcast
-      url: /podcast/
+    - name: Stories
+      url: /stories/
       weight: 1
-    - name: Documentary
-      url: /documentary/
+    - name: Series
+      url: /series/
       weight: 2
     - name: About
       url: /about/

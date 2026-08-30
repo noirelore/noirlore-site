@@ -7,33 +7,21 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "podcast"
-    label: "Podcast Episodes"
-    folder: "content/podcast"
+  - name: "stories"
+    label: "Stories"
+    folder: "content/stories"
     create: true
     slug: "{{slug}}"
+    sortable_fields: ["date", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Draft", name: "draft", widget: "boolean", default: true }
-      - { label: "Categories", name: "categories", widget: "list", default: ["Podcast"] }
-      - { label: "Cover Image", name: "image", widget: "image", required: false }
-      - { label: "Audio URL", name: "audio", widget: "string", required: false, hint: "Link to hosted audio file or podcast platform" }
-      - { label: "Summary", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "documentary"
-    label: "Documentary Projects"
-    folder: "content/documentary"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true }
-      - { label: "Categories", name: "categories", widget: "list", default: ["Documentary"] }
+      - { label: "Series", name: "series", widget: "list", required: false, hint: "Which series this case belongs to. Leave empty for a standalone story." }
+      - { label: "Episode", name: "episode", widget: "number", required: false, value_type: "int", hint: "Position within the series." }
       - { label: "Cover Image", name: "image", widget: "image", required: false }
       - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"

@@ -2,8 +2,8 @@
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-categories: ["Podcast"]
+series: [""]
+episode:
 image: ""
-audio: ""
 description: ""
 ---
