@@ -7,7 +7,7 @@
     </span>
     <h3 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ with .Params.episode }}<span class="card-episode">Episode {{ . }}</span>{{ end }}
-    <p class="card-summary">{{ .Summary }}</p>
+    <p class="card-summary">{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
     <time class="card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
   </div>
 </article>
